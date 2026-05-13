@@ -22,15 +22,16 @@
         font-family: "Montserrat", sans-serif;
         line-height: 1.6;
       }
+
       .container {
         width: 90%;
-        max-width: 1200px;
+        max-width: 1300px;
         margin: 0 auto;
       }
 
       .hero {
         position: relative;
-        background: url("https://luckybuddhaaffiliates.com/wp-content/uploads/2026/04/ChatGPT-Image-Apr-9-2026-11_00_05-AM.png");
+        background: url("/images/Casino-Promotions.png.webp");
         background-size: cover;
         background-position: center;
         height: 650px;
@@ -39,6 +40,12 @@
         text-align: left;
         padding: 20px 0;
         z-index: 1;
+      }
+
+      .hero-text {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
       }
 
       .hero::before {
@@ -67,7 +74,7 @@
       }
 
       .hero h2 {
-        font-size: clamp(18px, 4vw, 22px);
+        font-size: clamp(30px, 4vw, 22px);
         margin: 15px 0;
         font-weight: 700;
       }
@@ -180,6 +187,7 @@
           gap: 40px;
           margin-top: -30px;
         }
+
         .hero {
           height: 500px;
         }
@@ -196,6 +204,7 @@
         display: flex;
         flex-direction: column;
         align-items: center;
+        width: 100%;
       }
 
       .deals-content img {
@@ -204,11 +213,28 @@
         border-radius: 10px;
       }
 
+      .deals-section-footer {
+        margin: 40px 5% 60px;
+        padding: 20px;
+        border-radius: 20px;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .deals-section-footer .deals-content img {
+        width: 60%;
+        border-radius: 10px;
+      }
+
+      /* UPDATED: Games area now full width single image slider - keeping same container styles */
       .games-area {
         background-color: #000;
         color: #fff;
         position: relative;
         margin-top: 40px;
+        width: 100%;
       }
 
       .games-area h3 {
@@ -220,24 +246,27 @@
         padding: 0 15px;
       }
 
+      /* Modified slider wrapper for single full width image */
       .slider-wrapper {
         position: relative;
         display: flex;
         align-items: center;
         width: 100%;
-        padding: 0 10px;
+        margin: 0;
       }
 
+      /* This becomes the main container for single image carousel */
       .games-row {
         display: flex;
-        gap: 15px;
-        overflow-x: auto;
+        overflow-x: hidden;
         scroll-behavior: smooth;
-        padding-bottom: 15px;
         cursor: grab;
         flex: 1;
         -webkit-overflow-scrolling: touch;
         scrollbar-width: none;
+        width: 100%;
+        
+        position: relative;
       }
 
       .games-row:active {
@@ -248,11 +277,9 @@
         display: none;
       }
 
+      /* Each game thumb now takes FULL WIDTH of container (single image at a time) */
       .game-thumb {
-        min-width: 160px;
-        width: 160px;
-        height: 230px;
-        background: #1a1a1a;
+        /* background: #1a1a1a; */
         border-radius: 12px;
         overflow: hidden;
         position: relative;
@@ -264,14 +291,11 @@
       }
 
       .game-thumb:hover {
-        transform: scale(1.05);
-        border-color: #f9d423;
+        transform: scale(1.02);
       }
 
       .game-thumb img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
+        /* object-fit: cover; */
         pointer-events: none;
       }
 
@@ -288,6 +312,7 @@
         pointer-events: none;
       }
 
+      /* Arrow styles - exactly as original */
       .slide-arrow {
         position: absolute;
         top: 50%;
@@ -315,10 +340,36 @@
       }
 
       #slide-arrow-prev {
-        left: -5px;
+        left: 15px;
       }
+
       #slide-arrow-next {
-        right: -5px;
+        right: 15px;
+      }
+
+      /* Dot indicators for single image slider */
+      .slider-dots {
+        display: flex;
+        justify-content: center;
+        gap: 12px;
+        padding: 20px 0 25px;
+        background: #000;
+      }
+      .slider-dot {
+        width: 10px;
+        height: 10px;
+        background: #444;
+        border-radius: 50%;
+        cursor: pointer;
+        transition: 0.2s ease;
+      }
+      .slider-dot.active {
+        background: #ffd700;
+        transform: scale(1.3);
+        box-shadow: 0 0 6px gold;
+      }
+      .slider-dot:hover {
+        background: #ffd700;
       }
 
       @media (max-width: 700px) {
@@ -328,28 +379,17 @@
           padding: 8px 5px;
         }
         #slide-arrow-prev {
-          left: -5px;
+          left: 8px;
         }
         #slide-arrow-next {
-          right: -5px;
+          right: 8px;
         }
         .game-thumb {
-          min-width: 130px;
-          width: 130px;
-          height: 190px;
-        }
-        .game-thumb span {
-          font-size: 11px;
-          padding: 8px;
+          border-radius: 10px;
         }
       }
 
       @media (max-width: 480px) {
-        .game-thumb {
-          min-width: 110px;
-          width: 110px;
-          height: 160px;
-        }
         .btn-gold {
           padding: 12px 30px;
         }
@@ -403,19 +443,21 @@
       }
     </style>
   </head>
+
   <body>
     <section class="hero">
-      <div class="container">
+      <div class="container hero-text">
         <div class="hero-grid">
           <h1>
             Get 20,000 Gold <br />
             <span>Coins Free</span>
           </h1>
-          <h2>Deposit For Free Sweeps Coins</h2>
+          <h2>Deposit For Free Sweeps Coins Play Baccarat Casino Games</h2>
           <p>
             Join now and get daily bonuses, deals and rewards. No purchase
-            needed. US Players Welcome.
+            needed.
           </p>
+          <p>US Players Welcome. Void Where Prohibited. T&C Apply. 18+</p>
         </div>
         <a href="#" class="btn-gold">Register Now</a>
       </div>
@@ -507,6 +549,7 @@
       </div>
     </section>
 
+    <!-- MODIFIED: TOP CASINO PROMOTIONS - FULL WIDTH SINGLE IMAGE SLIDER (preserving dimensions, style and interaction) -->
     <section class="container games-area">
       <div class="header-row">
         <h3 class="section-title">TOP CASINO PROMOTIONS</h3>
@@ -515,90 +558,34 @@
         <button class="slide-arrow" id="slide-arrow-prev">&#10094;</button>
         <button class="slide-arrow" id="slide-arrow-next">&#10095;</button>
         <div class="games-row" id="games-row">
-          <a href="/table.html">
-            <div class="game-thumb">
-              <img src="/images/slot.avif" alt="Game 1" />
-            </div>
-          </a>
-          <a href="/blackjack.html">
-            <div class="game-thumb">
-              <img src="/images/blackjack1.avif" alt="Game 2" />
-            </div>
-          </a>
-
-          <a href="/roulette.html">
-            <div class="game-thumb">
-              <img src="/images/roulette1.avif" alt="Game 2" />
-            </div>
-          </a>
-          <a href="/poker.html">
-            <div class="game-thumb">
-              <img src="/images/poker1.avif" alt="Game 2" />
-            </div>
-          </a>
-          <a href="/scratchers.html">
-            <div class="game-thumb">
-              <img src="/images/scratchers1.avif" alt="Game 2" />
-            </div>
-          </a>
-          <a href="/bonus.html">
-            <div class="game-thumb">
-              <img src="/images/bonus-buy1.avif" alt="Game 2" />
-            </div>
-          </a>
-          <a href="/slot.html">
-            <div class="game-thumb">
-              <img src="/images/slot1.avif" alt="Game 2" />
-            </div>
-          </a>
-          <a href="/insta.html">
-            <div class="game-thumb">
-              <img src="/images/crash1.avif" alt="Game 2" />
-            </div>
-          </a>
-          <a href="/live.html">
-            <div class="game-thumb">
-              <img src="/images/live1.avif" alt="Game 2" />
-            </div>
-          </a>
-           <a href="/promotions.html">
-            <div class="game-thumb">
-              <img src="/images/promotions2.webp" alt="Game 2" />
-            </div>
-          </a>
-           <a href="/baccarat.html">
-            <div class="game-thumb">
-              <img src="/images/baccarat1.avif" alt="Game 2" />
-            </div>
-          </a>
-           <a href="/wheel.html">
-            <div class="game-thumb">
-              <img src="/images/wheel1.avif" alt="Game 2" />
-            </div>
-          </a>
-           <a href="/dice.html">
-            <div class="game-thumb">
-              <img src="/images/dice1.avif" alt="Game 2" />
-            </div>
-          </a>
-           <a href="/casino.html">
-            <div class="game-thumb">
-              <img src="/images/crash10.webp" alt="Game 2" />
-            </div>
-          </a>
-           <a href="/new.html">
-            <div class="game-thumb">
-              <img src="/images/new1.avif" alt="Game 2" />
-            </div>
-          </a>
+          <!-- Each game-thumb now represents a full-width slide -->
+          <div class="game-thumb">
+            <img src="/images/promotion.webp" alt="Baccarat Royale Promo" />
+          </div>
+          <div class="game-thumb">
+            <img
+              src="images/promotion1.webp"
+              alt="Gold Coins Jackpot"
+            />
+          </div>
+          <div class="game-thumb">
+            <img
+              src="/images/promotion2.webp"
+              alt="VIP Casino Bonus"
+            />
+          </div>
+          <!-- <div class="game-thumb">
+            <img src="/images/Casino-Promotions.png.webp" alt="Weekly Mega Deal" />
+          </div> -->
         </div>
       </div>
+      <div class="slider-dots" id="sliderDotsContainer"></div>
     </section>
 
-    <section class="deals-section">
+    <section class="deals-section-footer">
       <div class="deals-content">
         <img
-          src="https://luckybuddhaaffiliates.com/wp-content/uploads/2026/04/ChatGPT-Image-Apr-11-2026-02_49_39-PM-1024x683.png"
+          src="/images/Casino-Promotions.png.webp"
           alt="Promo"
           style="max-width: 100%; height: auto"
         />
@@ -654,34 +641,95 @@
     </footer>
 
     <script>
+      // SINGLE IMAGE FULL WIDTH SLIDER (1 image at a time, keeping original design & dimensions)
       (function () {
         const gamesRow = document.getElementById("games-row");
         const nextBtn = document.getElementById("slide-arrow-next");
         const prevBtn = document.getElementById("slide-arrow-prev");
+        const dotsContainer = document.getElementById("sliderDotsContainer");
 
+        if (!gamesRow) return;
+
+        const slides = Array.from(gamesRow.children);
+        const slideCount = slides.length;
+        let currentIndex = 0;
         let autoInterval;
         let isHovered = false;
         let autoScrollEnabled = true;
+        let isTransitioning = false;
 
-        const scrollAmount = () => Math.max(180, gamesRow.clientWidth * 0.7);
+        // Create dots dynamically
+        function createDots() {
+          if (!dotsContainer) return;
+          dotsContainer.innerHTML = "";
+          for (let i = 0; i < slideCount; i++) {
+            const dot = document.createElement("div");
+            dot.classList.add("slider-dot");
+            if (i === currentIndex) dot.classList.add("active");
+            dot.addEventListener("click", () => {
+              if (isTransitioning) return;
+              stopAutoSlide();
+              goToSlide(i);
+              startAutoSlide();
+            });
+            dotsContainer.appendChild(dot);
+          }
+        }
+
+        function updateDots() {
+          const dots = document.querySelectorAll(".slider-dot");
+          dots.forEach((dot, idx) => {
+            if (idx === currentIndex) dot.classList.add("active");
+            else dot.classList.remove("active");
+          });
+        }
+
+        function goToSlide(index, smooth = true) {
+          if (isTransitioning) return;
+          if (index < 0) index = slideCount - 1;
+          if (index >= slideCount) index = 0;
+          if (currentIndex === index) return;
+
+          currentIndex = index;
+          isTransitioning = true;
+
+          const scrollBehavior = smooth ? "smooth" : "auto";
+          gamesRow.style.scrollBehavior = scrollBehavior;
+
+          // Get the target slide element
+          const targetSlide = slides[currentIndex];
+          if (targetSlide) {
+            targetSlide.scrollIntoView({
+              behavior: scrollBehavior,
+              block: "nearest",
+              inline: "start",
+            });
+          }
+
+          setTimeout(() => {
+            isTransitioning = false;
+            updateDots();
+          }, 500);
+        }
+
+        function nextSlide() {
+          if (isTransitioning) return;
+          goToSlide(currentIndex + 1);
+        }
+
+        function prevSlide() {
+          if (isTransitioning) return;
+          goToSlide(currentIndex - 1);
+        }
 
         function performAutoSlide() {
-          if (!autoScrollEnabled || isHovered) return;
-          if (!gamesRow) return;
-
-          const maxScroll = gamesRow.scrollWidth - gamesRow.clientWidth;
-          let newLeft = gamesRow.scrollLeft + 220;
-
-          if (newLeft >= maxScroll - 20) {
-            gamesRow.scrollLeft = 0;
-          } else {
-            gamesRow.scrollLeft = newLeft;
-          }
+          if (!autoScrollEnabled || isHovered || isTransitioning) return;
+          nextSlide();
         }
 
         function startAutoSlide() {
           if (autoInterval) clearInterval(autoInterval);
-          autoInterval = setInterval(performAutoSlide, 2800);
+          autoInterval = setInterval(performAutoSlide, 3800);
         }
 
         function stopAutoSlide() {
@@ -691,38 +739,56 @@
           }
         }
 
+        // Arrow click handlers
         nextBtn.addEventListener("click", () => {
-          gamesRow.scrollLeft += scrollAmount();
-          if (autoInterval) {
-            stopAutoSlide();
-            setTimeout(() => {
-              if (!isHovered && autoScrollEnabled) {
-                startAutoSlide();
-              }
-            }, 3000);
-          }
+          if (isTransitioning) return;
+          stopAutoSlide();
+          nextSlide();
+          startAutoSlide();
         });
 
         prevBtn.addEventListener("click", () => {
-          gamesRow.scrollLeft -= scrollAmount();
-          if (autoInterval) {
-            stopAutoSlide();
-            setTimeout(() => {
-              if (!isHovered && autoScrollEnabled) {
-                startAutoSlide();
-              }
-            }, 3000);
-          }
+          if (isTransitioning) return;
+          stopAutoSlide();
+          prevSlide();
+          startAutoSlide();
         });
 
-        let startX, scrollLeft;
+        // Detect when scroll ends manually (in case user drags)
+        let scrollTimeout;
+        gamesRow.addEventListener("scroll", () => {
+          if (scrollTimeout) clearTimeout(scrollTimeout);
+          scrollTimeout = setTimeout(() => {
+            // find which slide is most visible
+            const containerRect = gamesRow.getBoundingClientRect();
+            let closestIndex = 0;
+            let closestDistance = Infinity;
+            slides.forEach((slide, idx) => {
+              const rect = slide.getBoundingClientRect();
+              const distance = Math.abs(rect.left - containerRect.left);
+              if (distance < closestDistance) {
+                closestDistance = distance;
+                closestIndex = idx;
+              }
+            });
+            if (closestIndex !== currentIndex) {
+              currentIndex = closestIndex;
+              updateDots();
+            }
+            isTransitioning = false;
+          }, 100);
+        });
+
+        // Swipe / drag handling for single image mode
+        let startX, scrollLeftStart;
         let isDragging = false;
+        let dragStartScrollLeft = 0;
 
         gamesRow.addEventListener("mousedown", (e) => {
           if (e.button !== 0) return;
           isDragging = true;
           startX = e.clientX;
-          scrollLeft = gamesRow.scrollLeft;
+          dragStartScrollLeft = gamesRow.scrollLeft;
           gamesRow.style.cursor = "grabbing";
           gamesRow.style.scrollBehavior = "auto";
           e.preventDefault();
@@ -733,7 +799,7 @@
         window.addEventListener("mousemove", (e) => {
           if (!isDragging) return;
           const dx = e.clientX - startX;
-          gamesRow.scrollLeft = scrollLeft - dx;
+          gamesRow.scrollLeft = dragStartScrollLeft - dx;
         });
 
         window.addEventListener("mouseup", () => {
@@ -751,25 +817,23 @@
           }
         });
 
-        let touchStartX, touchScrollLeft;
+        // Touch events
+        let touchStartX, touchStartScroll;
         let isTouching = false;
-
         gamesRow.addEventListener("touchstart", (e) => {
           isTouching = true;
           touchStartX = e.touches[0].clientX;
-          touchScrollLeft = gamesRow.scrollLeft;
+          touchStartScroll = gamesRow.scrollLeft;
           gamesRow.style.scrollBehavior = "auto";
           isHovered = true;
           stopAutoSlide();
         });
-
         gamesRow.addEventListener("touchmove", (e) => {
           if (!isTouching) return;
           const dx = e.touches[0].clientX - touchStartX;
-          gamesRow.scrollLeft = touchScrollLeft - dx;
+          gamesRow.scrollLeft = touchStartScroll - dx;
           e.preventDefault();
         });
-
         gamesRow.addEventListener("touchend", () => {
           isTouching = false;
           gamesRow.style.scrollBehavior = "smooth";
@@ -779,6 +843,7 @@
           }, 500);
         });
 
+        // Hover pause
         const wrapper = document.querySelector(".slider-wrapper");
         if (wrapper) {
           wrapper.addEventListener("mouseenter", () => {
@@ -793,12 +858,17 @@
 
         gamesRow.style.cursor = "grab";
 
+        // Initialize dots and go to first slide
+        createDots();
+        // ensure all slides have full width style, then set initial index & scroll position
         setTimeout(() => {
+          goToSlide(0, false);
           startAutoSlide();
           autoScrollEnabled = true;
         }, 100);
 
         window.addEventListener("load", () => {
+          goToSlide(0, false);
           startAutoSlide();
         });
       })();
